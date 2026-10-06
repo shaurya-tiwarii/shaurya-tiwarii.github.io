@@ -741,11 +741,11 @@ footer{border-top:1px solid var(--line);padding:26px 5vw;display:flex;justify-co
       <div class="p-body">
         <div class="p-idx">PROJECT - 01 · 2026 · MAJOR PROJECT</div>
         <h3>AURA</h3>
-        <p class="p-desc">AURA turns small-business site content into search visibility: crawl, recommend, generate, verify, publish. It's my final-year major project, built with FastAPI, Next.js and Supabase, fully Dockerized, where nothing goes live without a human saying so and publishing runs on a schedule.</p>
+        <p class="p-desc">Small businesses are invisible where customers now search: inside AI answers, not just Google rankings. AURA fixes that. A rule-based engine audits SEO (metadata, schema, links, images) and AI-search readiness (FAQs, semantic structure, completeness), then a 5-stage pipeline (crawl, recommend, generate, verify, publish) acts on it: Gemini drafts the content, a human approves before anything ships, and scheduled publishing keeps it fresh. It's my final-year major project, built with FastAPI, Next.js, PostgreSQL and Supabase, fully Dockerized.</p>
         <div class="p-metrics"><div><b>5</b><span>pipeline stages</span></div><div><b>81/81</b><span>automated checks</span></div><div><b>11/11</b><span>unit tests</span></div></div>
         <div class="p-flow"><span>crawl</span><i>→</i><span>recommend</span><i>→</i><span>generate</span><i>→</i><span>verify</span><i>→</i><span>publish</span></div>
-        <div class="p-outcome"><b>OUTCOME</b>Stack healthy locally - database, API and frontend all green, 81/81 automated backend checks passing.</div>
-        <div class="p-tags"><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span></div>
+        <div class="p-outcome"><b>OUTCOME</b>Proved reliability with 81/81 automated checks and 11/11 unit tests across a Dockerized 3-service stack (FastAPI, Next.js, PostgreSQL) with Supabase auth.</div>
+        <div class="p-tags"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span><span>Gemini</span></div>
         <div class="p-foot"><span class="p-link">▸ FINAL-YEAR MAJOR PROJECT</span><a class="p-code" href="mailto:shauryatiwari6161@gmail.com?subject=Code%20request%3A%20AURA">code on request →</a></div>
       </div>
     </article>
@@ -789,9 +789,9 @@ footer{border-top:1px solid var(--line);padding:26px 5vw;display:flex;justify-co
       <div class="p-body">
         <div class="p-idx">PROJECT - 02 · 2026</div>
         <h3>QueryPilot</h3>
-        <p class="p-desc">QueryPilot answers plain-English questions with safe, read-only SQL: you ask, a schema-aware Gemini generates the query over PostgreSQL, and strict guardrails handle the rest, with no writes, enforced timeouts, and validated queries only. The guardrails are the whole point, because I don't trust an LLM near my database.</p>
+        <p class="p-desc">Business users can't write SQL, and handing an LLM raw database access is a security incident waiting to happen. QueryPilot bridges that gap: a schema-aware Gemini translates plain-English questions into SQL, and a guardrail layer (17 blocked write/DDL keywords, stacked-query rejection, SELECT/WITH-only, 10s timeouts, 200-row caps) makes sure the model can read but never write. The guardrails are the whole point, because I don't trust an LLM near my database.</p>
         <div class="p-metrics"><div><b>21/21</b><span>guardrail tests</span></div><div><b>3</b><span>API endpoints</span></div><div><b>200</b><span>row cap</span></div></div>
-        <div class="p-outcome"><b>OUTCOME</b>MVP code's complete, with read-only guardrails unit-tested across 21 cases, and live database plus LLM integration is what's next.</div>
+        <div class="p-outcome"><b>OUTCOME</b>Working MVP on a seeded 100-row store (customers, products, orders) over Dockerized PostgreSQL: /ask, /schema and /health live. Auth, history and charting not built yet.</div>
         <div class="p-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Gemini</span><span>Python</span><span>Text-to-SQL</span></div>
         <div class="p-foot"><span class="p-link">▸ PIPELINE: QUESTION → SQL → VALIDATE → RESULTS</span><a class="p-code" href="https://github.com/shaurya-tiwarii/querypilot" target="_blank" rel="noopener">view code on github →</a></div>
       </div>
@@ -827,11 +827,11 @@ footer{border-top:1px solid var(--line);padding:26px 5vw;display:flex;justify-co
       <div class="p-body">
         <div class="p-idx">PROJECT - 03 · 2025</div>
         <h3>VIDSUM</h3>
-        <p class="p-desc">VIDSUM turns long videos into short, readable notes: drop in a video and yt-dlp pulls it, Whisper transcribes, Gemini generates summaries, key points and quizzes, because I built it to actually study from long lectures instead of rewatching them at 2x.</p>
-        <div class="p-metrics"><div><b>4</b><span>pipeline stages</span></div><div><b>4</b><span>artifacts per video</span></div><div><b>4</b><span>interface languages</span></div></div>
-        <div class="p-outcome"><b>OUTCOME</b>Complete 4-stage pipeline: video URL in, summaries, flashcards, quizzes and a chat tutor out.</div>
-        <div class="p-tags"><span>Python</span><span>Whisper</span><span>Gemini</span><span>yt-dlp</span><span>Flask</span></div>
-        <div class="p-foot"><span class="p-link">▸ PIPELINE: INGEST → TRANSCRIBE → SUMMARIZE → QUIZ</span><a class="p-code" href="https://github.com/shaurya-tiwarii/vidsum" target="_blank" rel="noopener">view code on github →</a></div>
+        <p class="p-desc">Long lectures are expensive to rewatch and terrible to revise from. VIDSUM turns them into study material: a 6-stage pipeline (ingest, extract, transcribe, generate, translate, tutor) converts any upload or YouTube link into summaries, practice questions, flashcards and quizzes, with a chat tutor that answers strictly from the transcript so nothing gets hallucinated. I built it to actually study from long lectures instead of rewatching them at 2x.</p>
+        <div class="p-metrics"><div><b>6</b><span>pipeline stages</span></div><div><b>8</b><span>API endpoints</span></div><div><b>4</b><span>artifacts per video</span></div></div>
+        <div class="p-outcome"><b>OUTCOME</b>Complete 6-stage pipeline: video URL in, transcript, translation, summaries, flashcards, quizzes and a grounded chat tutor out.</div>
+        <div class="p-tags"><span>Python</span><span>Flask</span><span>Whisper</span><span>Gemini</span><span>yt-dlp</span><span>FFmpeg</span></div>
+        <div class="p-foot"><span class="p-link">▸ PIPELINE: INGEST → EXTRACT → TRANSCRIBE → GENERATE → TRANSLATE → TUTOR</span><a class="p-code" href="https://github.com/shaurya-tiwarii/vidsum" target="_blank" rel="noopener">view code on github →</a></div>
       </div>
     </article>
     <article class="proj rv" data-tilt>
@@ -867,7 +867,7 @@ footer{border-top:1px solid var(--line);padding:26px 5vw;display:flex;justify-co
       <div class="p-body">
         <div class="p-idx">PROJECT - 04 · 2025</div>
         <h3>AI DMS Chatbot</h3>
-        <p class="p-desc">The AI DMS Chatbot answers questions over your own documents with a real RAG pipeline: LangChain chunking, embeddings, ChromaDB vector store, top-k retrieval, and Gemini answers.</p>
+        <p class="p-desc">Company documents are where answers go to die: nobody reads the 40-page handbook. The AI DMS Chatbot makes them conversational. A real RAG pipeline (LangChain chunking, embeddings, ChromaDB vector store, top-k retrieval) grounds every Gemini answer in retrieved document chunks with citations, so it answers from your documents instead of making things up.</p>
         <div class="p-outcome"><b>OUTCOME</b>Real RAG, not keyword search: every answer's grounded in retrieved document chunks.</div>
         <div class="p-tags"><span>LangChain</span><span>ChromaDB</span><span>Gemini</span><span>Python</span><span>RAG</span></div>
         <div class="p-foot"><span class="p-link">▸ PIPELINE: CHUNK → EMBED → RETRIEVE → ANSWER</span><a class="p-code" href="mailto:shauryatiwari6161@gmail.com?subject=Code%20request%3A%20AI%20DMS%20Chatbot">code on request →</a></div>
